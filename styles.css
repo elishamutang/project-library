@@ -14,6 +14,8 @@ body {
     display: grid;
     grid-template-rows: 150px 1fr 80px;
     grid-template-columns: 0.5fr 1fr;
+
+    position: absolute;
 }
 
 /* Header styling */
@@ -40,7 +42,7 @@ div.header:first-child {
     font-weight: 500;
 }
 
-button.header:last-child {
+button.header {
     margin: 40px 0;
     margin-right: 200px;
     padding: 0 20px;
@@ -50,6 +52,54 @@ button.header:last-child {
     background-color: transparent;
     border-radius: 10px;
     border: 2px solid black;
+    cursor: pointer;
+}
+
+dialog {
+    position: relative;
+    margin: 0 auto;
+    top: calc(100vh/4);
+    max-width: 100ch;
+
+    padding: 30px;
+    border-radius: 20px;
+}
+
+/* dialog > form {
+    border: 2px solid red;
+} */
+
+dialog > form > * {
+    margin: 40px;
+    font-size: 16px;
+}
+
+dialog > form > p {
+    font-size: 20px;
+}
+
+dialog > form > div > label {
+    display: inline-block;
+    width: 100px;
+    text-align: left;
+}
+
+dialog > form > div > input {
+    font-size: 16px;
+}
+
+dialog::backdrop {
+    background-color: grey;
+    opacity: 0.6;
+}
+
+dialog > button {
+    font-size: 18px;
+    padding: 5px;
+    border-radius: 5px;
+    border: none;
+    background-color: rgb(241, 194, 107);
+    margin-left: 40px;
 }
 
 /* Main */
