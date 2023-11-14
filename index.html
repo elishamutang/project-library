@@ -8,12 +8,29 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500&display=swap" rel="stylesheet">
-        <script href="main.js" defer></script>
+        <script src="main.js" defer></script>
     </head>
     <body>
         <header>
             <div id="logo" class="header">Library</div>
-            <button class="header">Add Book</button>
+            <button class="header" id="addBtn">Add Book</button>
+            <dialog>
+                <form>
+                    <p>Please enter the book details below</p>
+
+                    <div class="addBookForm">
+                        <label for="title">Book Title: </label>
+                        <input type="text" name="title" id="title" required>
+                    </div>
+
+                    <div class="addBookForm">
+                        <label for="author">Author: </label>
+                        <input type="text" name="author" id="author" required>
+                    </div>
+                </form>
+                
+                <button type="submit" formmethod="dialog">Close</button>
+            </dialog>
         </header>
 
         <main>
