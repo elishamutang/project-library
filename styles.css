@@ -40,9 +40,14 @@ div.header:first-child {
     font-weight: 500;
 }
 
-div.header:last-child {
-    margin-top: 60px;
+button.header:last-child {
+    margin: 40px 0;
     margin-right: 200px;
+    padding: 0 20px;
     font-size: 30px;
     font-weight: 500;
+
+    background-color: transparent;
+    border-radius: 10px;
+    border: 2px solid black;
 }
