@@ -58,7 +58,7 @@ button.header {
 dialog {
     position: relative;
     margin: 0 auto;
-    top: calc(100vh/4);
+    top: 50px;
     max-width: 100ch;
 
     padding: 30px;
@@ -70,22 +70,24 @@ dialog {
 } */
 
 dialog > form > * {
-    margin: 40px;
+    margin: 30px;
     font-size: 16px;
 }
 
 dialog > form > p {
     font-size: 20px;
+    text-align: center;
 }
 
 dialog > form > div > label {
     display: inline-block;
-    width: 100px;
+    width: 150px;
     text-align: left;
 }
 
 dialog > form > div > input {
     font-size: 16px;
+    padding: 5px;
 }
 
 dialog::backdrop {
@@ -99,7 +101,7 @@ dialog > button {
     border-radius: 5px;
     border: none;
     background-color: rgb(241, 194, 107);
-    margin-left: 40px;
+    margin-left: 30px;
 }
 
 /* Main */
