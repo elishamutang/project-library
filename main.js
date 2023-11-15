@@ -11,7 +11,7 @@ function addBookToLibrary() {
 // Opens up dialog which contains a form to insert book data
 
 const addBook = document.getElementById("addBtn");
-const closeDialog = document.querySelector("dialog > button");
+const closeDialog = document.querySelector("button[type=submit]");
 const dialog = document.querySelector("dialog");
 
 addBook.addEventListener("click", () => {
