@@ -13,7 +13,7 @@
     <body>
         <header>
             <div id="logo" class="header">Library</div>
-            <button class="header" id="addBtn">Add Book</button>
+            <button type="button" class="header" id="addBtn">Add Book</button>
             <dialog>
                 <form>
                     <p>Please enter the book details below</p>
@@ -30,22 +30,25 @@
 
                     <div class="addBookForm">
                         <label for="pages">No. of pages: </label>
-                        <input type="number" name="pages" id="pages" required>
+                        <input type="number" name="pages" id="pages" min="1" required>
                     </div>
 
                     <div class="addBookForm">
                         <label for="read">Have you read it? </label>
-                        <input type="text" name="read" id="read" required>
+                        <input type="text" name="read" id="read" placeholder="Yes or No" required>
                     </div>
 
                     <button type="reset">Reset</button>
                     <button type="submit" formmethod="dialog">Close</button>
+                    <button type="submit" id="submit">Submit</button>
                 </form>
             </dialog>
         </header>
 
         <main>
-
+            <div class="main">
+                
+            </div>
         </main>
 
         <footer>
