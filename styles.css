@@ -69,7 +69,7 @@ dialog {
     border: 2px solid red;
 } */
 
-dialog > form > * {
+dialog > form > *:not(button) {
     margin: 30px;
     font-size: 16px;
 }
@@ -95,7 +95,7 @@ dialog::backdrop {
     opacity: 0.6;
 }
 
-dialog > button {
+dialog > form > button {
     font-size: 18px;
     padding: 5px;
     border-radius: 5px;
