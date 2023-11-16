@@ -8,7 +8,6 @@
 body {
     width: 100vw;
     height: 100vh;
-    border: 2px solid black;
     background-color: rgb(135, 193, 205);
 
     display: grid;
@@ -118,17 +117,18 @@ main {
     border: 2px solid red;
 
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 50px;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    /* grid-template-rows: repeat(auto-fit, minmax(150px, 250px)); */
+    gap: 10px 20px;
 }
 
 .book {
     border: 2px solid red;
-    /* width: calc(100vw/5); */
 }
 
 div.book:first-child {
     /* margin-left: 50px; */
+    /* grid-area: book1; */
 }
 
 
