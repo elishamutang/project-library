@@ -16,19 +16,29 @@ function Book(title, author, pages, read) {
 // Takes input from user through form and creates Book object.
 function addBookToLibrary(event) {
 
-    // Check whether user has filled in all inputs
-    const collectInputs = document.querySelectorAll("input");
+    const bookTitle = document.querySelector("#title").value;
+    const bookAuthor = document.querySelector("#author").value;
+    const bookPage = document.querySelector("#pages").value;
+    const bookRead = document.querySelector("#read").value;
+
+    console.log(bookTitle, bookAuthor, bookPage, bookRead);
+
+    // Check whether user enters all input fields
+    let checkInputs = document.querySelectorAll("input");
     let collectedInputs = [];
 
-    collectInputs.forEach((input) => {
+    checkInputs.forEach((input) => {
         if(input.value) {
             collectedInputs.push(input.value);
         }
     })
 
-    if(collectedInputs.length === collectInputs.length) {
+    if(collectedInputs.length === checkInputs.length) {
         event.preventDefault();
-        console.log(collectedInputs);
+
+        let newBook = new Book(bookTitle, bookAuthor, bookPage, bookRead);
+        console.log(newBook);
+
         formCon.reset();
         dialog.close();
     }
