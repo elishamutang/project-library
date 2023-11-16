@@ -86,7 +86,8 @@ dialog > form > div > label {
     text-align: left;
 }
 
-dialog > form > div > input {
+dialog > form > div > input,
+dialog > form > div > select {
     font-size: 16px;
     padding: 5px;
 }
