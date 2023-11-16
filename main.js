@@ -1,21 +1,30 @@
 const myLibrary = []; // to store book objects
-// const title = document.getElementById("title");
-// const author = document.getElementById("author");
-const submitBtn = document.querySelector("#submit");
+const submitBtn = document.querySelector("#btnSubmit");
 const book = document.querySelector("div.main");
+const formCon = document.querySelector("form");
 
 submitBtn.addEventListener("click", addBookToLibrary);
 
-function Book() {
-
+// Book object constructor
+function Book(title, author, pages, read) {
+    this.title = title;
+    this.author = author;
+    this.pages = pages;
+    this.read = read;
 }
 
-function addBookToLibrary() {
-    console.log(e);
-    let bookTitle = document.getElementById("title");
-    let author = document.getElementById("author").value;
+// Takes input from user through form and creates Book object.
+function addBookToLibrary(event) {
+    const checkInput = document.querySelectorAll("input");
+    console.log(checkInput);
 
-    console.log(bookTitle);
+    checkInput.forEach((input) => {
+        if(input.value != "") {
+            console.log(input.value);
+        } else {
+            console.log("empty");
+        }
+    })
 }
 
 // Opens up dialog which contains a form to insert book data
@@ -24,7 +33,7 @@ const addBook = document.getElementById("addBtn");
 const closeDialog = document.querySelector("button[formmethod=dialog]");
 const dialog = document.querySelector("dialog");
 
-addBook.addEventListener("click", () => {
+addBook.addEventListener("click", (event) => {
     dialog.showModal();
 })
 
