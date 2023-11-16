@@ -5,9 +5,9 @@ To action:
 
 1. Ensure data from book object is displayed in main container.
 
-2. Display book dynamically in main element whenever user inserts a new book.
+2. Display book dynamically in main element whenever user inserts a new book. *Solved using auto-fit/auto-fill and minmax for grid-items. Alternatively can use media queries but out of scope for this project.*
 
-3. Use grid to dynamically adjust inside main element (i.e resize book 'cards' to fit within main element).
+3. Use grid to dynamically adjust inside main element (i.e resize book 'cards' to fit within main element). *Solved using auto-fit/auto-fill and minmax for grid-items.*
 
 
 Future improvements:
