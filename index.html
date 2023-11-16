@@ -35,7 +35,11 @@
 
                     <div class="addBookForm">
                         <label for="read">Have you read it? </label>
-                        <input type="text" name="read" id="read" placeholder="Yes or No" required>
+                        <select name="read" id="read">
+                            <option value="yes">Yes</option>
+                            <option value="no">No</option>
+                            <option value="progress">In Progress</option>
+                        </select>
                     </div>
 
                     <button type="reset">Reset</button>
