@@ -1,4 +1,5 @@
 const myLibrary = []; // to store book objects
+
 const submitBtn = document.querySelector("#btnSubmit");
 const book = document.querySelector("div.main");
 const formCon = document.querySelector("form");
@@ -38,6 +39,7 @@ function addBookToLibrary(event) {
 
         let newBook = new Book(bookTitle, bookAuthor, bookPage, bookRead);
         console.log(newBook);
+        myLibrary.push(newBook);
 
         formCon.reset();
         dialog.close();
