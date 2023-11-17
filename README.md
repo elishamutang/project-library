@@ -9,6 +9,8 @@ To action:
 
 3. Use grid to dynamically adjust inside main element (i.e resize book 'cards' to fit within main element). *Solved using auto-fit/auto-fill and minmax for grid-items.*
 
+4. Utilize data attributes. Dynamically create data attributes for each "book" object using JS. Ensure there will be a link between myLibrary array and book object in DOM (i.e if a book is to removed from the DOM, that book will also be removed in myLibrary array).
+
 
 Future improvements:
 
