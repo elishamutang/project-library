@@ -1,7 +1,7 @@
 const myLibrary = []; // to store book objects
 
 const submitBtn = document.querySelector("#btnSubmit");
-const book = document.querySelector("div.book");
+const bookWrapper = document.querySelector("div.wrapper");
 const formCon = document.querySelector("form");
 
 submitBtn.addEventListener("click", addBookToLibrary);
@@ -45,7 +45,10 @@ function addBookToLibrary(event) {
         console.log(newBook);
         myLibrary.push(newBook);
 
-        book.innerHTML = newBook.info();
+        const newBookCard = document.createElement("div");
+        newBookCard.setAttribute("class", "book");
+        newBookCard.innerHTML = newBook.info();
+        bookWrapper.append(newBookCard);
 
         formCon.reset();
         dialog.close();
