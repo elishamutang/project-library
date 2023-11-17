@@ -118,13 +118,16 @@ main {
 
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    /* grid-template-rows: repeat(auto-fit, minmax(150px, 250px)); */
+    grid-template-rows: repeat(auto-fill, 300px);
+    align-items: start;
     gap: 10px 15px;
 }
 
 .book {
     border: 2px solid red;
     text-align: center;
+    width: inherit;
+    height: 300px;
 
     display: grid;
 }
