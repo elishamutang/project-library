@@ -18,3 +18,4 @@ Bugs found:
 Future improvements:
 
 1. CSS hover effects for buttons.
+2. Freeze header (i.e when scrolling downwards, header follows).
