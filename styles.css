@@ -118,7 +118,6 @@ main {
 
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    grid-template-rows: repeat(auto-fill, 300px);
     align-items: start;
     gap: 10px 15px;
 }
@@ -127,7 +126,7 @@ main {
     border: 2px solid red;
     text-align: center;
     width: inherit;
-    height: 300px;
+    height: 400px;
 
     display: grid;
 }
