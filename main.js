@@ -39,7 +39,6 @@ function addBookToLibrary(event) {
     })
 
     if(collectedInputs.length === checkInputs.length) {
-
         if(bookPage > 0) {      
             event.preventDefault();
 
