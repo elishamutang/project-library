@@ -39,19 +39,21 @@ function addBookToLibrary(event) {
     })
 
     if(collectedInputs.length === checkInputs.length) {
-        event.preventDefault();
 
-        let newBook = new Book(bookTitle, bookAuthor, bookPage, bookRead);
-        console.log(newBook);
-        myLibrary.push(newBook);
+        if(bookPage > 0) {      
+            event.preventDefault();
 
-        const newBookCard = document.createElement("div");
-        newBookCard.setAttribute("class", "book");
-        newBookCard.innerHTML = newBook.info();
-        bookWrapper.append(newBookCard);
+            let newBook = new Book(bookTitle, bookAuthor, bookPage, bookRead);
+            myLibrary.push(newBook);
 
-        formCon.reset();
-        dialog.close();
+            const newBookCard = document.createElement("div");
+            newBookCard.setAttribute("class", "book");
+            newBookCard.innerHTML = newBook.info();
+            bookWrapper.append(newBookCard);
+
+            formCon.reset();
+            dialog.close();
+        }
     }
 }
 
