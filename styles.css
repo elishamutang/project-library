@@ -53,6 +53,13 @@ button.header {
     border-radius: 10px;
     border: 2px solid black;
     cursor: pointer;
+
+    transition: background-color 0.3s, color 0.3s;
+}
+
+button.header:hover {
+    background-color: black;
+    color: white;
 }
 
 dialog {
