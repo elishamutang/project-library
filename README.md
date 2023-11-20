@@ -19,3 +19,4 @@ Future improvements:
 
 1. CSS hover effects for buttons.
 2. Freeze header (i.e when scrolling downwards, header follows).
+3. Styling of modal (general styling and transition).
