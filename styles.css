@@ -72,10 +72,6 @@ dialog {
     border-radius: 20px;
 }
 
-/* dialog > form {
-    border: 2px solid red;
-} */
-
 dialog > form > *:not(button) {
     margin: 30px;
     font-size: 16px;
@@ -135,13 +131,103 @@ main {
     width: inherit;
     height: 400px;
 
-    display: grid;
+    display: flex;
+    flex-direction: column;
 }
 
 .book > h1 {
     font-size: 25px;
     margin: 15px 0;
 }
+
+.buttons {
+    border: 2px solid red;
+    height: 50px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.buttons > label,
+.buttons > button {
+    margin: 20px;
+}
+
+#removeBtn {
+    font-size: 16px;
+    padding: 5px 10px;
+    border-radius: 5px;
+    box-shadow: none;
+    border: none;
+    background-color: white;
+    transition: background-color .3s, color .3s;
+}
+
+#removeBtn:hover {
+    background-color: rgb(244, 35, 35);
+    color: white;
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+}
+
+.switch input[type="checkbox"] {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+input[type="checkbox"]:checked + .slider {
+    background-color: #2196F3;
+}
+
+input[type="checkbox"]:focus + .slider {
+    box-shadow: 0 0 1px #2196F3;
+}
+
+input[type="checkbox"]:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+}
+
+.slider.round {
+    border-radius: 34px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+}
+
 
 /* Footer */
 
