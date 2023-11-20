@@ -12,7 +12,7 @@ To action:
 4. Utilize data attributes. Dynamically create data attributes for each "book" object using JS. Ensure there will be a link between myLibrary array and book object in DOM (i.e if a book is to removed from the DOM, that book will also be removed in myLibrary array).
 
 Bugs found: 
-5. Users were able to input pages less than 0. *Solution was to check if value for pages is more than 0, then run code nested inside if statement.*
+1. Users were able to input pages less than 0. *Solution was to check if value for pages is more than 0, then run code nested inside if statement.*
 
 
 Future improvements:
