@@ -4,6 +4,7 @@ const submitBtn = document.querySelector("#btnSubmit");
 const bookWrapper = document.querySelector("div.wrapper");
 const formCon = document.querySelector("form");
 
+// Event listener for when users click Add Book button in header.
 submitBtn.addEventListener("click", addBookToLibrary);
 
 
@@ -27,8 +28,6 @@ function addBookToLibrary(event) {
     const bookAuthor = document.querySelector("#author").value;
     const bookPage = document.querySelector("#pages").value;
     const bookRead = document.querySelector("#read").value;
-
-    console.log(bookTitle, bookAuthor, bookPage, bookRead);
 
     // Check whether user enters all input fields
     let checkInputs = document.querySelectorAll("input");
@@ -91,6 +90,13 @@ function addBookToLibrary(event) {
 
             // Append book card to wrapper
             bookWrapper.append(newBookCard);
+
+            // Dynamically create data attribute for each book card based on index in myLibrary array
+            for(let i=0; i<myLibrary.length; i++) {
+                console.log(myLibrary[i].title, i);
+
+                newBookCard.dataset.bookIdx = `${i}`;
+            };
 
             // Resets form when submitted.
             formCon.reset();
