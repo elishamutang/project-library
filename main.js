@@ -7,6 +7,7 @@ const formCon = document.querySelector("form");
 // Event listener for when users click Add Book button in header.
 submitBtn.addEventListener("click", addBookToLibrary);
 
+
 // Target remove button by using event delegation (i.e Event Bubbling)
 // Here I targetted bookWrapper since it is not being dynamically created using JS.
 bookWrapper.addEventListener("click", function(event) {
@@ -14,6 +15,7 @@ bookWrapper.addEventListener("click", function(event) {
         console.log("removeBtn");
     }
 })
+
 
 // Book object constructor
 function Book(title, author, pages, read) {
