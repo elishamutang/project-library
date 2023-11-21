@@ -7,6 +7,13 @@ const formCon = document.querySelector("form");
 // Event listener for when users click Add Book button in header.
 submitBtn.addEventListener("click", addBookToLibrary);
 
+// Target remove button by using event delegation (i.e Event Bubbling)
+// Here I targetted bookWrapper since it is not being dynamically created using JS.
+bookWrapper.addEventListener("click", function(event) {
+    if(event.target.classList.contains("removeBtn")) {
+        console.log("removeBtn");
+    }
+})
 
 // Book object constructor
 function Book(title, author, pages, read) {
@@ -74,7 +81,7 @@ function addBookToLibrary(event) {
             // Creates remove button
             const removeBtn = document.createElement("button");
             removeBtn.setAttribute("type", "button");
-            removeBtn.setAttribute("id", "removeBtn");
+            removeBtn.setAttribute("class", "removeBtn");
 
             const removeBtnTxt = document.createTextNode("Remove");
             removeBtn.append(removeBtnTxt);
@@ -93,8 +100,6 @@ function addBookToLibrary(event) {
 
             // Dynamically create data attribute for each book card based on index in myLibrary array
             for(let i=0; i<myLibrary.length; i++) {
-                console.log(myLibrary[i].title, i);
-
                 newBookCard.dataset.bookIdx = `${i}`;
             };
 
