@@ -12,7 +12,7 @@ submitBtn.addEventListener("click", addBookToLibrary);
 // Here I targetted bookWrapper since it is not being dynamically created using JS.
 bookWrapper.addEventListener("click", function(event) {
     if(event.target.classList.contains("removeBtn")) {
-        console.log("removeBtn");
+
     }
 })
 
