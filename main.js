@@ -11,8 +11,11 @@ submitBtn.addEventListener("click", addBookToLibrary);
 // Target remove button by using event delegation (i.e Event Bubbling)
 // Here I targetted bookWrapper since it is not being dynamically created using JS.
 bookWrapper.addEventListener("click", function(event) {
-    if(event.target.classList.contains("removeBtn")) {
 
+    console.log(event.target);
+
+    if(event.target.classList.contains("removeBtn")) {
+        let dataAtr = this.querySelectorAll("[data-book-idx]");
     }
 })
 
