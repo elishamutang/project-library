@@ -7,8 +7,8 @@ This branch was created for the following purpose(s):
 
 To Action:
 
-1. Complete remove functionality for each book card.
-2. When book card is removed, it should also be removed in HTML and myLibrary array.
+1. Complete remove functionality for each book card. (Done)
+2. When book card is removed, it should also be removed in HTML and myLibrary array. (Done)
 
 
 Bug found:
