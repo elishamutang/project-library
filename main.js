@@ -13,9 +13,33 @@ submitBtn.addEventListener("click", addBookToLibrary);
 bookWrapper.addEventListener("click", function(event) {
 
     if(event.target.classList.contains("removeBtn")) {
-        console.log(event.target.dataset.idx);
 
-        console.log(myLibrary[event.target.dataset.idx]);
+        let removeBookIdx = event.target.dataset.idx;
+        console.log(`Index removed: ${removeBookIdx}`);
+        
+
+        let removeBtnIdx = document.querySelectorAll(".removeBtn");
+        let removeBook = document.querySelectorAll(".book");
+
+        removeBook.forEach((bookIndex) => {
+            if(bookIndex.dataset.bookIdx == removeBookIdx) {
+                bookIndex.remove();
+            }
+
+            if(bookIndex.dataset.bookIdx >= removeBookIdx) {
+                bookIndex.dataset.bookIdx = `${bookIndex.dataset.bookIdx-1}`;
+            }
+        })
+
+        removeBtnIdx.forEach((btnidx) => {
+            if(btnidx.dataset.idx >= removeBookIdx) {
+                btnidx.dataset.idx = `${btnidx.dataset.idx-1}`;
+            }
+        })
+
+        myLibrary.splice(removeBookIdx, 1);
+
+        console.log(myLibrary);
     }
 })
 
