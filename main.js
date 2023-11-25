@@ -12,10 +12,10 @@ submitBtn.addEventListener("click", addBookToLibrary);
 // Here I targetted bookWrapper since it is not being dynamically created using JS.
 bookWrapper.addEventListener("click", function(event) {
 
-    console.log(event.target);
-
     if(event.target.classList.contains("removeBtn")) {
-        let dataAtr = this.querySelectorAll("[data-book-idx]");
+        console.log(event.target.dataset.idx);
+
+        console.log(myLibrary[event.target.dataset.idx]);
     }
 })
 
@@ -106,6 +106,7 @@ function addBookToLibrary(event) {
             // Dynamically create data attribute for each book card based on index in myLibrary array
             for(let i=0; i<myLibrary.length; i++) {
                 newBookCard.dataset.bookIdx = `${i}`;
+                removeBtn.dataset.idx = `${i}`;
             };
 
             // Resets form when submitted.
