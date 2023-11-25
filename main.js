@@ -17,7 +17,6 @@ bookWrapper.addEventListener("click", function(event) {
         let removeBookIdx = event.target.dataset.idx;
         console.log(`Index removed: ${removeBookIdx}`);
         
-
         let removeBtnIdx = document.querySelectorAll(".removeBtn");
         let removeBook = document.querySelectorAll(".book");
 
@@ -38,8 +37,28 @@ bookWrapper.addEventListener("click", function(event) {
         })
 
         myLibrary.splice(removeBookIdx, 1);
-
         console.log(myLibrary);
+    }
+
+    if(event.target.classList.contains("slider")) {
+
+        console.log(event.target.dataset.idx);
+        
+        let sliderIdx = event.target.dataset.idx;
+        let sliderElem = document.querySelectorAll("span.slider.round");
+
+        console.log(myLibrary[sliderIdx].read);
+
+        sliderElem.forEach((slider) => {
+            if(slider.classList.contains("read")) {
+                slider.classList.remove("read");
+                myLibrary[sliderIdx].read = "no";
+            } else {
+                slider.classList.add("read");
+                myLibrary[sliderIdx].read ="yes";
+            }
+        })
+
     }
 })
 
@@ -131,7 +150,14 @@ function addBookToLibrary(event) {
             for(let i=0; i<myLibrary.length; i++) {
                 newBookCard.dataset.bookIdx = `${i}`;
                 removeBtn.dataset.idx = `${i}`;
+                sliderSpan.dataset.idx = `${i}`;
             };
+
+            // Sets book card read status if book already read
+            if(myLibrary[myLibrary.length-1].read == "yes") {
+                sliderInput.checked = true;
+                sliderSpan.setAttribute("class", "slider round read");
+            }
 
             // Resets form when submitted.
             formCon.reset();
