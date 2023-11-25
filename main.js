@@ -49,19 +49,24 @@ bookWrapper.addEventListener("click", function(event) {
 
         // Changes read status
         sliderElem.forEach((slider) => {
+
             if(slider.dataset.idx == sliderIdx && slider.classList.contains("read")) {
                 slider.classList.remove("read");
                 myLibrary[sliderIdx].read = "no";
+
             } else if(slider.dataset.idx == sliderIdx) {
                 slider.classList.add("read");
                 myLibrary[sliderIdx].read = "yes";
+
             }
         })
 
         // Changes background color of each book card.
         removeBook.forEach((book) => {
+            
             if(book.dataset.bookIdx == sliderIdx && book.classList.contains("read")) {
                 book.classList.remove("read");
+
             } else if(book.dataset.bookIdx == sliderIdx) {
                 book.classList.add("read");
             }
