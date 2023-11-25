@@ -167,10 +167,12 @@ function addBookToLibrary(event) {
 
             // Sets book card read status if book already read
             if(myLibrary[myLibrary.length-1].read == "yes") {
-
+                
+                // Read class added to slider
                 sliderInput.checked = true;
                 sliderSpan.setAttribute("class", "slider round read");
 
+                // Read class added to book card div
                 newBookCard.setAttribute("class", "book read");
             }
 
