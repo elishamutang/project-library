@@ -12,6 +12,7 @@ submitBtn.addEventListener("click", addBookToLibrary);
 // Here I targetted bookWrapper since it is not being dynamically created using JS.
 bookWrapper.addEventListener("click", function(event) {
 
+    // Removes book card from HTML and myLibrary.
     if(event.target.classList.contains("removeBtn")) {
 
         let removeBookIdx = event.target.dataset.idx;
@@ -40,14 +41,11 @@ bookWrapper.addEventListener("click", function(event) {
         console.log(myLibrary);
     }
 
+    // Dynamically changes "read" status on each book card.
     if(event.target.classList.contains("slider")) {
-
-        console.log(event.target.dataset.idx);
         
         let sliderIdx = event.target.dataset.idx;
         let sliderElem = document.querySelectorAll("span.slider.round");
-
-        console.log(myLibrary[sliderIdx].read);
 
         sliderElem.forEach((slider) => {
             if(slider.classList.contains("read")) {
