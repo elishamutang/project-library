@@ -12,14 +12,14 @@ submitBtn.addEventListener("click", addBookToLibrary);
 // Here I targetted bookWrapper since it is not being dynamically created using JS.
 bookWrapper.addEventListener("click", function(event) {
 
+    let removeBtnIdx = document.querySelectorAll(".removeBtn");
+    let removeBook = document.querySelectorAll(".book");
+
     // Removes book card from HTML and myLibrary.
     if(event.target.classList.contains("removeBtn")) {
 
         let removeBookIdx = event.target.dataset.idx;
         console.log(`Index removed: ${removeBookIdx}`);
-        
-        let removeBtnIdx = document.querySelectorAll(".removeBtn");
-        let removeBook = document.querySelectorAll(".book");
 
         removeBook.forEach((bookIndex) => {
             if(bookIndex.dataset.bookIdx == removeBookIdx) {
@@ -48,15 +48,14 @@ bookWrapper.addEventListener("click", function(event) {
         let sliderElem = document.querySelectorAll("span.slider.round");
 
         sliderElem.forEach((slider) => {
-            if(slider.classList.contains("read")) {
+            if(slider.dataset.idx == sliderIdx && slider.classList.contains("read")) {
                 slider.classList.remove("read");
                 myLibrary[sliderIdx].read = "no";
-            } else {
+            } else if(slider.dataset.idx == sliderIdx) {
                 slider.classList.add("read");
-                myLibrary[sliderIdx].read ="yes";
+                myLibrary[sliderIdx].read = "yes";
             }
         })
-
     }
 })
 
@@ -153,8 +152,11 @@ function addBookToLibrary(event) {
 
             // Sets book card read status if book already read
             if(myLibrary[myLibrary.length-1].read == "yes") {
+
                 sliderInput.checked = true;
                 sliderSpan.setAttribute("class", "slider round read");
+
+                newBookCard.setAttribute("class", "book read");
             }
 
             // Resets form when submitted.
