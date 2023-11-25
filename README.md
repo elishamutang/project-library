@@ -9,3 +9,8 @@ To Action:
 
 1. Complete remove functionality for each book card.
 2. When book card is removed, it should also be removed in HTML and myLibrary array.
+
+
+Bug found:
+
+1. User able to enter 01, 02 etc for page number.
