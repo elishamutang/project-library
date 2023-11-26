@@ -20,7 +20,7 @@ bookWrapper.addEventListener("click", function(event) {
     if(event.target.classList.contains("removeBtn")) {
 
         let removeBookIdx = event.target.dataset.idx;
-        console.log(`Index removed: ${removeBookIdx}`);
+        console.log(`Book removed: ${removeBookIdx}`);
 
         // Updates book index 
         removeBook.forEach((bookIndex) => {
