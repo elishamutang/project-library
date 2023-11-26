@@ -186,6 +186,10 @@ main {
     font-weight: 100;
 }
 
+.readStat {
+    border: 2px solid red;
+}
+
 .buttons {
     /* border: 2px solid red; */
     margin-top: 10px;
