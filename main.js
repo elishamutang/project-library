@@ -14,6 +14,7 @@ bookWrapper.addEventListener("click", function(event) {
 
     let removeBtnIdx = document.querySelectorAll(".removeBtn");
     let removeBook = document.querySelectorAll(".book");
+    let sliderElem = document.querySelectorAll("span.slider.round");
 
     // Removes book card from HTML and myLibrary.
     if(event.target.classList.contains("removeBtn")) {
@@ -21,6 +22,7 @@ bookWrapper.addEventListener("click", function(event) {
         let removeBookIdx = event.target.dataset.idx;
         console.log(`Index removed: ${removeBookIdx}`);
 
+        // Updates book index 
         removeBook.forEach((bookIndex) => {
             if(bookIndex.dataset.bookIdx == removeBookIdx) {
                 bookIndex.remove();
@@ -31,9 +33,17 @@ bookWrapper.addEventListener("click", function(event) {
             }
         })
 
+        // Updates remove button index
         removeBtnIdx.forEach((btnidx) => {
             if(btnidx.dataset.idx >= removeBookIdx) {
                 btnidx.dataset.idx = `${btnidx.dataset.idx-1}`;
+            }
+        })
+
+        // Updates slider element index
+        sliderElem.forEach((slider) => {
+            if(slider.dataset.idx >= removeBookIdx) {
+                slider.dataset.idx = `${slider.dataset.idx-1}`;
             }
         })
 
@@ -45,7 +55,6 @@ bookWrapper.addEventListener("click", function(event) {
     if(event.target.classList.contains("slider")) {
         
         let sliderIdx = event.target.dataset.idx;
-        let sliderElem = document.querySelectorAll("span.slider.round");
 
         // Changes read status
         sliderElem.forEach((slider) => {
