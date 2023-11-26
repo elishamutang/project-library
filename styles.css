@@ -308,7 +308,20 @@ footer {
     align-items: center;
 }
 
-footer > div.credits {
+div.credits {
     font-size: 18px;
     letter-spacing: 2px;
+
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+}
+
+div.credits > a {
+    transition: transform 0.3s;
+}
+
+div.credits > a:hover {
+    transform: rotate(360deg) scale(1.1);
 }
