@@ -191,6 +191,14 @@ main {
 
 .readStat {
     border: 2px solid red;
+    background-color: rgb(236, 255, 129);
+    font-size: 18px;
+
+    text-align: center;
+}
+
+.readStat > p {
+    margin: 5px 0;
 }
 
 .buttons {
