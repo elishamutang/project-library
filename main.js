@@ -15,6 +15,7 @@ bookWrapper.addEventListener("click", function(event) {
     let removeBtnIdx = document.querySelectorAll(".removeBtn");
     let removeBook = document.querySelectorAll(".book");
     let sliderElem = document.querySelectorAll("span.slider.round");
+    let readStatusDiv = document.querySelectorAll(".readStat");
 
     // Removes book card from HTML and myLibrary.
     if(event.target.classList.contains("removeBtn")) {
@@ -79,6 +80,19 @@ bookWrapper.addEventListener("click", function(event) {
 
             } else if(book.dataset.bookIdx == sliderIdx) {
                 book.classList.add("read");
+            }
+        })
+
+        // Sets up read status div in each book card
+        readStatusDiv.forEach((div) => {
+
+            if(div.dataset.idx == sliderIdx && div.classList.contains("read")) {
+                div.style.display = "none";
+                div.classList.remove("read");
+
+            } else if(div.dataset.idx == sliderIdx) {
+                div.style.display = "";
+                div.classList.add("read");
             }
         })
     }
@@ -165,6 +179,13 @@ function addBookToLibrary(event) {
             
             newBookCard.append(bookContent);
 
+            // Create book read status div
+            const readStatus = document.createElement("div");
+            readStatus.setAttribute("class", "readStat");
+            readStatus.style.display = "none";
+
+            newBookCard.append(readStatus);
+
             // Append book card to wrapper
             bookWrapper.append(newBookCard);
 
@@ -173,6 +194,7 @@ function addBookToLibrary(event) {
                 newBookCard.dataset.bookIdx = `${i}`;
                 removeBtn.dataset.idx = `${i}`;
                 sliderSpan.dataset.idx = `${i}`;
+                readStatus.dataset.idx = `${i}`;
             };
 
             // Sets book card read status if book already read
@@ -184,6 +206,11 @@ function addBookToLibrary(event) {
 
                 // Read class added to book card div
                 newBookCard.setAttribute("class", "book read");
+
+                // Set read status in readStatus div
+                readStatus.style.display = "";
+                readStatus.setAttribute("class", "readStat read");
+                readStatus.innerHTML = `<p>You've read this!</p>`;
             }
 
             // Resets form when submitted.
