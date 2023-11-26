@@ -55,6 +55,7 @@ bookWrapper.addEventListener("click", function(event) {
     if(event.target.classList.contains("slider")) {
         
         let sliderIdx = event.target.dataset.idx;
+        console.log(`Book card changed (index): ${sliderIdx}`);
 
         // Changes read status
         sliderElem.forEach((slider) => {
