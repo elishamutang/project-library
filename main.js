@@ -132,7 +132,8 @@ function addBookToLibrary(event) {
 
     // If all fields are entered (including pages > 0), form is submitted.
     if(collectedInputs.length === checkInputs.length) {
-        if(bookPage > 0) {      
+        if(bookPage > 0 && !bookPage.startsWith("0")) {     
+
             event.preventDefault(); // If pages > 0, disables original form function which sends data to server.
 
             // Create new book object each time user fills in form and push to myLibrary array.
@@ -216,6 +217,10 @@ function addBookToLibrary(event) {
             // Resets form when submitted.
             formCon.reset();
             dialog.close();
+
+        } else {
+            alert("Invalid number of pages");
+            event.preventDefault();
         }
     }
 }
