@@ -153,8 +153,11 @@ main {
     height: 400px;
     background: rgb(133, 206, 251);
 
-    display: flex;
-    flex-direction: column;
+    /* display: flex;
+    flex-direction: column; */
+
+    display: grid;
+    grid-template-rows: 0.5fr 2fr 0.25fr;
 }
 
 .book.read {
