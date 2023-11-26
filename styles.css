@@ -88,6 +88,7 @@ dialog > form > div > label {
     display: inline-block;
     width: 150px;
     text-align: left;
+    font-weight: 500;
 }
 
 dialog > form > div > input,
@@ -103,6 +104,7 @@ dialog::backdrop {
 
 dialog > form > button {
     font-size: 18px;
+    font-weight: 500;
     padding: 5px 10px;
     border-radius: 5px;
     border: none;
@@ -310,6 +312,7 @@ footer {
 
 div.credits {
     font-size: 18px;
+    font-weight: 500;
     letter-spacing: 2px;
 
     display: flex;
