@@ -312,7 +312,7 @@ footer {
 
 div.credits {
     font-size: 18px;
-    font-weight: 500;
+    font-weight: bold;
     letter-spacing: 2px;
 
     display: flex;
