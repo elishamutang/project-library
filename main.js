@@ -93,7 +93,7 @@ function Book(title, author, pages, read) {
     this.read = read;
 
     this.info = () => {
-        return `${title}<br>${author}<br>${pages} pages <br>${read}`;
+        return `<h1>${title}</h1>\n<h2>${author}</h2>\n<h3>${pages} pages</h3>`;
     }
 }
 
