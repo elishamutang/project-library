@@ -108,6 +108,23 @@ dialog > form > button {
     border: none;
     background-color: rgb(241, 194, 107);
     margin-left: 30px;
+    cursor: pointer;
+
+    transition: transform 0.3s, background-color 0.3s, color 0.3s;
+}
+
+dialog > form > button:hover {
+    transform: scale(1.1);
+}
+
+dialog > form > button[type="submit"]:hover {
+    background-color: rgb(80, 188, 80);
+    color: white;
+}
+
+dialog > form > button[type="reset"]:hover {
+    background-color: #e75c5c;
+    color: white;
 }
 
 /* Main */
@@ -134,7 +151,7 @@ main {
     text-align: center;
     width: inherit;
     height: 400px;
-    background: rgb(127, 203, 249);
+    background: rgb(133, 206, 251);
 
     display: flex;
     flex-direction: column;
@@ -142,7 +159,7 @@ main {
 
 .book.read {
     background-color: lightgreen;
-    border: 1px solid rgb(210, 255, 64);
+    border: 1px solid rgb(0, 132, 26);
 }
 
 .bookContent {
