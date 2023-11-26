@@ -2,7 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Rubik', sans-serif;
+    font-family: 'Playfair Display', sans-serif;
 }
 
 body {
@@ -33,21 +33,21 @@ header {
 }
 
 div.header {
-    margin: 20px 0;
+    margin-bottom: 20px;
 }
 
 div.header:first-child {
     margin-left: 80px;
-    font-size: 50px;
-    font-weight: 500;
+    font-size: 60px;
+    font-weight: 700;
 }
 
 button.header {
     margin: 20px 0;
     margin-right: 80px;
     padding: 0 20px;
-    font-size: 25px;
-    font-weight: 500;
+    font-size: 28px;
+    font-weight: 700;
 
     background-color: transparent;
     border-radius: 10px;
@@ -73,12 +73,14 @@ dialog {
 }
 
 dialog > form > *:not(button) {
-    margin: 30px;
-    font-size: 16px;
+    margin: 40px;
+    font-size: 18px;
 }
 
 dialog > form > p {
-    font-size: 20px;
+    margin: 10px;
+    font-size: 23px;
+    font-weight: 600;
     text-align: center;
 }
 
@@ -101,7 +103,7 @@ dialog::backdrop {
 
 dialog > form > button {
     font-size: 18px;
-    padding: 5px;
+    padding: 5px 10px;
     border-radius: 5px;
     border: none;
     background-color: rgb(241, 194, 107);
@@ -127,6 +129,7 @@ main {
 
 .book {
     border: 2px solid red;
+    border-radius: 10px;
     text-align: center;
     width: inherit;
     height: 400px;
@@ -139,9 +142,21 @@ main {
     background-color: lightgreen;
 }
 
-.book > h1 {
-    font-size: 25px;
-    margin: 15px 0;
+.bookContent {
+    margin: 50px auto;
+}
+
+.bookContent > h1 {
+    font-size: 65px;
+}
+
+.bookContent > h2 {
+    font-size: 38px;
+    margin-top: 20px;
+}
+
+.bookContent > h3 {
+    font-size: 30px;
 }
 
 .buttons {
@@ -242,4 +257,13 @@ footer {
 
     border-top: 2px solid black;
     background-color: white;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer > div.credits {
+    font-size: 18px;
+    letter-spacing: 2px;
 }
