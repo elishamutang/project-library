@@ -21,7 +21,7 @@ To Action:
 
 Bug found:
 
-1. User able to enter 01, 02 etc for page number.
+1. User able to enter 01, 02 etc for page number. (Resolved).
 
 Future improvements:
 
