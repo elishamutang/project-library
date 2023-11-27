@@ -48,6 +48,13 @@ bookWrapper.addEventListener("click", function(event) {
             }
         })
 
+        // Updates readStat div index
+        readStatusDiv.forEach((div) => {
+            if(div.dataset.idx >= removeBookIdx) {
+                div.dataset.idx = `${div.dataset.idx-1}`;
+            }
+        })
+
         myLibrary.splice(removeBookIdx, 1);
         console.log(myLibrary);
     }
@@ -92,6 +99,7 @@ bookWrapper.addEventListener("click", function(event) {
 
             } else if(div.dataset.idx == sliderIdx) {
                 div.style.display = "";
+                div.innerHTML = `You've reaed this!`;
                 div.classList.add("read");
             }
         })
