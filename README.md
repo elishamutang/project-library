@@ -27,3 +27,4 @@ Future improvements:
 
 1. Allow user to edit details of book card. (currently out of project scope)
 2. Change to a better font (current font sucks on low font size)
+3. Allow users to filter through books. (currently out of project scope)
