@@ -29,3 +29,4 @@ Future improvements:
 2. Change to a better font (current font sucks on low font size)
 3. Allow users to filter through books. (currently out of project scope)
 4. Make webpage responsive to different screen sizes (currently out of project scope)
+5. RE-FACTOR CODE
