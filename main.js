@@ -247,7 +247,7 @@ const addBook = document.getElementById("addBtn");
 const closeDialog = document.querySelector("button[formmethod=dialog]");
 const dialog = document.querySelector("dialog");
 
-addBook.addEventListener("click", (event) => {
+addBook.addEventListener("click", () => {
     dialog.showModal();
 })
 
