@@ -107,15 +107,21 @@ bookWrapper.addEventListener("click", function(event) {
 })
 
 
-// Book object constructor
-function Book(title, author, pages, read) {
-    this.title = title;
-    this.author = author;
-    this.pages = pages;
-    this.read = read;
+// Book class
+class Book {
+    constructor(_title, _author, _pages, _read) {
 
-    this.info = () => {
-        return `<h1>${title}</h1>\n<h2>${author}</h2>\n<h3>${pages} pages</h3>`;
+        this.title = _title;
+        this.author = _author;
+        this.pages = _pages;
+        this.read = _read;
+
+    }
+
+    bookInfo() {
+
+        return `<h1>${this.title}</h1>\n<h2>${this.author}</h2>\n<h3>${this.pages} pages</h3>`;
+
     }
 }
 
@@ -184,7 +190,7 @@ function addBookToLibrary(event) {
             // Create book card content
             const bookContent = document.createElement("div");
             bookContent.setAttribute("class", "bookContent");
-            bookContent.innerHTML = newBook.info();
+            bookContent.innerHTML = newBook.bookInfo();
             
             newBookCard.append(bookContent);
 
