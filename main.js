@@ -109,6 +109,7 @@ bookWrapper.addEventListener("click", function(event) {
 
 // Book class
 class Book {
+    // Normal convention to use underscore infront of variables for internal use only.
     constructor(_title, _author, _pages, _read) {
 
         this.title = _title;
